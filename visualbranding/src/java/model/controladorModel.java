@@ -1,3 +1,5 @@
+package model;
+
 import java.io.*;
 import java.util.*;
 import javax.comm.*;
@@ -16,7 +18,7 @@ import java.util.Enumeration;
  *
  * @author J
  */
-public class controlador {
+public class controladorModel {
      static Enumeration portList;
     static CommPortIdentifier portId;
     String[] lista={"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r"};

@@ -1,9 +1,12 @@
+package controller;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+import model.controladorModel;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
@@ -18,8 +21,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import model.*;
 /**
+ *
+ * @author J
+ *//**
  *
  * @author J
  */
@@ -47,7 +53,7 @@ static Enumeration portList;
           System.out.println("ALERTA SERVLET!");
         // TODO code application logic here
         try{
-        controlador controler = new controlador();
+        controladorModel controler = new controladorModel();
         controler.printSerial(dato);
         }catch(Exception ex){
             System.out.println("Expecion NIÑO MALOOOOOOOO!!!");
