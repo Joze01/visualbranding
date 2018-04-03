@@ -21,7 +21,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.*;
+import model.registroModel;
 /**
  *
  * @author J
@@ -53,10 +55,19 @@ static Enumeration portList;
           System.out.println("ALERTA SERVLET!");
         // TODO code application logic here
         try{
-        controladorModel controler = new controladorModel();
-        
-        
-        controler.printSerial(dato);
+                HttpSession sesion = request.getSession();
+                if(sesion.isNew()){
+                String redirectURL = "../index.jsp";
+                response.sendRedirect(redirectURL);
+                }else{
+                       System.out.println("ACTIVA SERVLET");
+                       sesion.setAttribute("valida", true);
+                       controladorModel controler = new controladorModel();
+                       registroModel modelobd = new registroModel();
+                       controler.printSerial(dato);
+                       modelobd.newRegistro(sesion.getAttribute("sexo").toString(), "B1");
+                }
+        //controler.printSerial(dato);
         }catch(Exception ex){
             System.out.println("Expecion NIÑO MALOOOOOOOO!!!");
         }

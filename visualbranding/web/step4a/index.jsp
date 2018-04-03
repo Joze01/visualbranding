@@ -11,7 +11,7 @@
  }else{
         System.out.println("ACTIVA");
         sesion.setAttribute("valida", true);
-        sesion.setAttribute("sexo","femenino");
+        sesion.setAttribute("sexo","Femenino");
  }
 %>
 	<head>

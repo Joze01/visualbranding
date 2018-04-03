@@ -38,36 +38,21 @@ public class controladorModel {
         
         // TODO code application logic here
         while (portList.hasMoreElements()) {
-           
             System.out.println(messageString);
             portId = (CommPortIdentifier) portList.nextElement();
             if (portId.getPortType() == CommPortIdentifier.PORT_SERIAL) {
                  if (portId.getName().equals("COM3")) {
-                 
-                     if (serialPort != null)
-                    {
+                    if (serialPort != null){
                         serialPort.close();
                     }
-                     
-                //if (portId.getName().equals("/dev/term/a")) {
                     try {
                         serialPort = (SerialPort)
                         portId.open("VisualBradingServer", 2000);
-                    } catch (PortInUseException e) {
-                    System.out.println(e.toString());}
-                    try {
                         outputStream = serialPort.getOutputStream();
-                    } catch (IOException e) {
-                        serialPort.close();
-                    System.out.println("Ex2");}
-                    try {
-                         
                         serialPort.setSerialPortParams(9600,
                             SerialPort.DATABITS_8,
                             SerialPort.STOPBITS_1,
-                            SerialPort.PARITY_NONE);
-                    } catch (UnsupportedCommOperationException e) {}
-                    try {
+                            SerialPort.PARITY_NONE);               
                         outputStream.write(messageString.getBytes());
                     } catch (IOException e) {
                     serialPort.close();

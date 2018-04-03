@@ -5,10 +5,22 @@
  */
 package model;
 
+import java.sql.SQLException;
+
 /**
  *
  * @author Jose
  */
 public class registroModel {
     
+    String query="";
+    Conexion con;
+    public void newRegistro(String sexo, String resultado) throws SQLException{
+    
+        query="INSERT INTO registro(idregistro, sexoRegistro, fechaRegistro, resultadoRegistro) VALUES ('"+sexo+"',CURRENT_DATE(),"+resultado+")";
+        con=new  Conexion();
+        System.out.println(query);
+        con.setQuery(query);
+        con.cerrarConexion();
+    }
 }
