@@ -54,6 +54,8 @@ static Enumeration portList;
         // TODO code application logic here
         try{
         controladorModel controler = new controladorModel();
+        
+        
         controler.printSerial(dato);
         }catch(Exception ex){
             System.out.println("Expecion NIÑO MALOOOOOOOO!!!");

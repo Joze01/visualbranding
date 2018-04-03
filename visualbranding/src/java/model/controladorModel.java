@@ -21,16 +21,16 @@ import java.util.Enumeration;
 public class controladorModel {
      static Enumeration portList;
     static CommPortIdentifier portId;
-    String[] lista={"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r"};
+    String[] lista={"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","0"};
    //  char[] lista={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r'};
-      
-    String messageString = "a";
+    String[] Resultados={""};  
+    String messageString = "0";
     static SerialPort serialPort;
     static OutputStream outputStream;
     
     public void printSerial(int indice){
       try{
-       messageString=lista[indice].toString();
+        messageString=lista[indice].toString();
        
        
         portList = CommPortIdentifier.getPortIdentifiers();
@@ -70,7 +70,9 @@ public class controladorModel {
                     try {
                         outputStream.write(messageString.getBytes());
                     } catch (IOException e) {
-                    serialPort.close();}
+                    serialPort.close();
+                        System.out.println(e.toString());
+                    }
                    serialPort.close();
                 }
             }
