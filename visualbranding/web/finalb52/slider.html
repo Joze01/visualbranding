@@ -3,7 +3,17 @@
 	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-
+<%
+ HttpSession sesion = request.getSession();
+ if(sesion.isNew()){
+        String redirectURL = "../index.jsp";
+        response.sendRedirect(redirectURL);
+ }else{
+        System.out.println("ACTIVA");
+        sesion.setAttribute("valida", true);
+       
+ }
+%>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">

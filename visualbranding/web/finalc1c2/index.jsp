@@ -11,6 +11,7 @@
  }else{
         System.out.println("ACTIVA");
         sesion.setAttribute("valida", true);
+       
  }
 %>
 	<head>
