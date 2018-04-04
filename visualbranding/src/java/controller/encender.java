@@ -69,7 +69,7 @@ static Enumeration portList;
                 }
         //controler.printSerial(dato);
         }catch(Exception ex){
-            System.out.println("Expecion NIÑO MALOOOOOOOO!!!");
+            System.out.println(ex.toString());
         }
         String url = request.getParameter("url");
         response.sendRedirect(url);
