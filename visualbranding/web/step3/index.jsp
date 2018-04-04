@@ -16,7 +16,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>steph2 - Slider Revolution</title>
+		<title>step3 - Slider Revolution</title>
 		<meta name="description" content="Slider Revolution Example" />
 		<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
 		<meta name="author" content="ThemePunch" />
@@ -35,7 +35,7 @@
 		<script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
 		<script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
 		<script type="text/javascript" src="js/jquery.revslider.embed.js"></script>
-		<script type="text/javascript" src="js/jquery.revslider-steph2.js"></script>
+		<script type="text/javascript" src="js/jquery.revslider-step3.js"></script>
 		<script type="text/javascript">
 		    jQuery(function() {
               jQuery().embedRevslider();
@@ -67,6 +67,6 @@
 	
 	<body style="margin: 0; padding: 0">
 			
-		<div class="revslider" data-alias="steph2"></div>
+		<div class="revslider" data-alias="step3"></div>
 	    </body>
 </html>

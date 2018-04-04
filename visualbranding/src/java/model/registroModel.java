@@ -17,7 +17,7 @@ public class registroModel {
     Conexion con;
     public void newRegistro(String sexo, String resultado) throws SQLException{
     
-        query="INSERT INTO registro(sexoRegistro, fechaRegistro, resultadoRegistro) VALUES ('"+sexo+"',CURRENT_DATE(),"+resultado+")";
+        query="INSERT INTO registro(sexoRegistro, fechaRegistro, resultadoRegistro) VALUES ('"+sexo+"',CURRENT_DATE(),'"+resultado+"')";
         con=new  Conexion();
         System.out.println(query);
         con.setQuery(query);

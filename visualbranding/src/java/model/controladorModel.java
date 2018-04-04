@@ -1,4 +1,4 @@
-package model;
+    package model;
 
 import java.io.*;
 import java.util.*;
@@ -22,7 +22,7 @@ public class controladorModel {
      static Enumeration portList;
     static CommPortIdentifier portId;
     String[] lista={"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","0"};
-   //  char[] lista={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r'};
+
     String[] Resultados={""};  
     String messageString = "0";
     static SerialPort serialPort;
@@ -32,7 +32,7 @@ public class controladorModel {
       try{
         messageString=lista[indice].toString();
        
-       
+          System.out.println(lista[indice].toString());
         portList = CommPortIdentifier.getPortIdentifiers();
         System.out.println(portList.hasMoreElements());
         

@@ -60,12 +60,31 @@ static Enumeration portList;
                 String redirectURL = "../index.jsp";
                 response.sendRedirect(redirectURL);
                 }else{
+                        String[] lista2={"Nutrición Profunda/Suave y Manejable", //0
+                        "Protección profunda/Limpieza Renovadora",//1
+                        "3 En 1/Manzana",//2
+                        "Alivio Instantáneo/MEN - Con Old Spice",//3
+                        "Control Caída/Control grasa",//4
+                        "Humecta",//5
+                        "Restauración",//6
+                        "Summer/Hidrocauterización",//7
+                        "Rizos Definidos",//8
+                        "Control Caída",//9
+                        "Liso Extremo/Liso y Sedoso",//10
+                        "NO EN USO",//11
+                        "Keratin Repair/Brillo Extremo",//12
+                        "Curvas Peligrosas",//13
+                        "Prolóngalos",//14
+                        "Al desnudo Brillo",//15
+                        "AL desnuedo Volumen",//16
+                        "NO EN USO"    
+                        };
                        System.out.println("ACTIVA SERVLET");
                        sesion.setAttribute("valida", true);
                        controladorModel controler = new controladorModel();
                        registroModel modelobd = new registroModel();
                        controler.printSerial(dato);
-                       modelobd.newRegistro(sesion.getAttribute("sexo").toString(), "B1");
+                       modelobd.newRegistro(sesion.getAttribute("sexo").toString(),lista2[dato]);
                 }
         //controler.printSerial(dato);
         }catch(Exception ex){
